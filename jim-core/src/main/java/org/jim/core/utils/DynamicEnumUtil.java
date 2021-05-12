@@ -1,4 +1,10 @@
 package org.jim.core.utils;
+
+import org.jim.core.packets.Command;
+import sun.reflect.ConstructorAccessor;
+import sun.reflect.FieldAccessor;
+import sun.reflect.ReflectionFactory;
+
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -6,14 +12,6 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
- 
-
-
-import org.jim.core.packets.Command;
-
-import sun.reflect.ConstructorAccessor;
-import sun.reflect.FieldAccessor;
-import sun.reflect.ReflectionFactory;
 
 /**
  *
@@ -42,7 +40,7 @@ public class DynamicEnumUtil {
        // blank out the final bit in the modifiers int
        modifiers &= ~Modifier.FINAL;
        modifiersField.setInt(field, modifiers);
- 
+
        FieldAccessor fa = reflectionFactory.newFieldAccessor(field, false);
        fa.set(target, value);
    }
