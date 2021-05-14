@@ -22,7 +22,7 @@ public class ChatBody extends Message {
 	 */
 	private String to;
 	/**
-	 * 消息类型;(如：0:text、1:image、2:voice、3:vedio、4:music、5:news)
+	 * 消息类型;(如：0:text、1:image、2:voice、3:video、4:music、5:news)
 	 */
 	private Integer msgType;
 	/**
